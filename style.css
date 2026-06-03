@@ -1,0 +1,224 @@
+/* --- Configurações Globais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #4f46e5; /* Roxo/Azul moderno */
+    --secondary-color: #0f172a; /* Azul escuro quase preto */
+    --bg-light: #f8fafc; /* Cinza bem claro */
+    --text-dark: #334155; /* Cinza escuro para textos */
+    --text-light: #ffffff;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* --- Cabeçalho --- */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 8%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.navbar a {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-left: 30px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--primary-color);
+}
+
+.navbar .btn-nav {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
+.navbar .btn-nav:hover {
+    background-color: #4338ca;
+    color: var(--text-light);
+}
+
+/* --- Seção Hero --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8%;
+    background: radial-gradient(circle at 90% 10%, rgba(79, 70, 229, 0.08) 0%, transparent 40%),
+                linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--primary-color);
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #64748b;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.btn-primary:hover {
+    background-color: #4338ca;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    transform: translateY(-2px);
+}
+
+/* --- Seção de Serviços --- */
+.services {
+    padding: 100px 8%;
+    background-color: var(--text-light);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #64748b;
+    font-size: 16px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--bg-light);
+    padding: 40px 30px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #e2e8f0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(79, 70, 229, 0.1);
+}
+
+.card h3 {
+    font-size: 22px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #64748b;
+}
+
+/* --- Rodapé --- */
+.footer {
+    background-color: var(--secondary-color);
+    color: #94a3b8;
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+}
+
+/* --- Responsividade (Mobile) --- */
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 5%;
+    }
+    
+    .navbar a:not(.btn-nav) {
+        display: none; /* Simplificação básica para mobile */
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

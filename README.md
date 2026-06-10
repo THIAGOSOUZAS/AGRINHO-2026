@@ -1,1 +1,2 @@
 # AGRINHO-2026
+O DevSite é um site simples e moderno desenvolvido em HTML, CSS e JavaScript. Ele possui uma página inicial atrativa, menu de navegação responsivo, seção de serviços e design limpo, proporcionando uma experiência agradável para os usuários em diferentes dispositivos. Ideal para apresentação de serviços, portfólio ou projetos web.
